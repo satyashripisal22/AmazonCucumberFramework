@@ -11,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomelyfAdminUserPage {
 
 	WebDriver driver;
+	
 	@FindBy(xpath="//input[@placeholder='Search user']") WebElement searchbox;
 	@FindBy(xpath="//table[@class='MuiTable-root css-a0xgdx']") WebElement searchResult;
 	@FindBy(xpath = "//table[@class='MuiTable-root css-a0xgdx']/tbody/tr") List<WebElement> tableRows;
