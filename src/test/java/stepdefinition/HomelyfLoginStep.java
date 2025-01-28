@@ -72,6 +72,22 @@ public class HomelyfLoginStep {
 		System.out.println(driver.getTitle());
 		Assert.assertEquals(driver.getPageSource().contains("Home Lyf"), true);
 	}
+	
+	@And("Click on Actions button")
+	public void click_on_actions_button() {
+		hlap.clickOnActionBtn();
+	}
+
+	@And("Select Preview option")
+	public void select_preview_option() {
+		hlap.selectOption();
+	}
+	@Then("User should open Preview Popup")
+	public void user_should_open_preview_popup() {
+		System.out.println(hlap.getTextOfPreviewPopup());
+		String expectedText = "User details";
+		Assert.assertEquals(hlap.getTextOfPreviewPopup(), expectedText);
+	}
 
 
 	

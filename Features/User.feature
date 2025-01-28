@@ -10,6 +10,10 @@ Feature: Users
     Given Select User option on Home Page 
     When Enter email Address in Search Field
     Then Display User on select Email Address
+    And Click on Actions button
+    And Select Preview option
+    Then User should open Preview Popup
+    
     
     
     
