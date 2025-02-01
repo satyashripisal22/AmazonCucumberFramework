@@ -33,6 +33,7 @@ public class HomelyfAdminTimeSlotPage {
 		
 		
 		public HomelyfAdminTimeSlotPage(WebDriver driver) {
+			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
 		
@@ -40,12 +41,12 @@ public class HomelyfAdminTimeSlotPage {
 			listItemBtn.click();
 		}
 		
-		public void getItemList() {
+		public void getItemList(String str) {
 			int n = itemList.size();
 			
 			for(int i = 0 ; i < n; i++ ) {
 				String item = itemList.get(i).getText();
-				if(item.contains("Time slot")) {
+				if(item.contains(str)) {
 					itemList.get(i).click();
 					break;
 				}
