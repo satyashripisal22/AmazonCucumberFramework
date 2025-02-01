@@ -1,6 +1,7 @@
 
 Feature: Verify Time Slots page in admin
 
+	@login
   Background: login for all scenarios 
     Given User opens URL "https://admin-ui-internal.homelyfservices.com/" on Chrome
     When User enters Username as "riturajsalavi.rs@gmail.com" and Password as "Password@1"
